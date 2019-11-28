@@ -154,7 +154,12 @@
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
   <h3 class="w3-center">MY WORK</h3>
   <p class="w3-center"><em>Working on it.... <br> </em></p><br>
-<iframe src=»https://drive.google.com/open?id=1YOLlP6G6Lmds7yvBFdTpq28HcPqKXuh8» width=»100%» height=»680px»></iframe>
+<form name="formulario" method="post" action="http://pagina.com/send.php"
+      enctype="multipart/form-data"> <!-- ¡No olvides el enctype! -->
+  <!-- Campo de selección de archivo -->
+  <input type="file" name="archivo" accept=".pdf,.jpg,.png" multiple>
+</form>
+   
    </div>
 </div>
 
