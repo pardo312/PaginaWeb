@@ -11,7 +11,11 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
+	<script src="TemplateData/UnityProgress.js"></script>
+    	<script src="Build/UnityLoader.js"></script>
+        <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Builds.json", {onProgress: UnityProgress});
+        </script>
 	<style>
 	body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 	body, html {
@@ -169,9 +173,14 @@
 	  <div class="card" style="width: 70rem;">
 	   	  <img src="/images/ping pong.png" class="d-block h-25" alt="Concurso TIC Bou">
 		  <div class="card-body">
-			<h5 class="card-title">Concurso Inovacion con TIC</h5>
-			<p class="card-text">Juego simple de pong creado en JavaScript. Link del repo: <a href="https://github.com/pardo312/PingPong">Pong - by Daniel</a></p>
-		  </div>
+			<div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">SummerGame</div>
+      </div>
+    </div>		  </div>
 	  </div>
   </p>
 		
